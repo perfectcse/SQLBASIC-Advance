@@ -10,11 +10,11 @@ Welcome! This repository contains my **daily SQL practice** from beginner to adv
 
 ## 📅 Progress Log
 
-| Day | Topic                                           | Status         |
-| --- | ----------------------------------------------- | -------------- |
-| 1   | Basics (Create, Insert, Select, Update, Delete) | ✅ Done        |
-| 2   | Aggregate Functions                             | ✅ Done        |
-| 3   | Joins                                           | 🔜 Coming Soon |
+| Day | Topic                         | Status  |
+| --- | ----------------------------- | ------- |
+| 1   | Basics (CRUD)                 | ✅ Done |
+| 2   | Aggregate Functions           | ✅ Done |
+| 3   | Joins (All types + Self Join) | ✅ Done |
 
 ---
 
