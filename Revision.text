@@ -1,0 +1,32 @@
+| 🔧 Command     | 🔤 Purpose                 | 📝 Example                                         |
+| -------------- | -------------------------- | -------------------------------------------------- |
+| `CREATE TABLE` | Create a new table         | `CREATE TABLE Students (...)`                      |
+| `INSERT INTO`  | Add new data rows          | `INSERT INTO Students (name, age) VALUES (...)`    |
+| `SELECT`       | Retrieve data from a table | `SELECT * FROM Students`                           |
+| `UPDATE`       | Modify existing data       | `UPDATE Students SET age = 24 WHERE name = 'Amit'` |
+| `DELETE`       | Remove rows from a table   | `DELETE FROM Students WHERE name = 'Sneha'`        |
+....................................................................................................
+| 🛠️ Function      | 🎯 Use Case                 | ✅ Example                                   |
+| ----------------- | --------------------------- | ------------------------------------------- |
+| `COUNT()`         | Total number of rows        | `SELECT COUNT(*) FROM Orders`               |
+| `SUM()`           | Add up a column’s values    | `SELECT SUM(quantity * price) FROM Orders`  |
+| `AVG()`           | Calculate average           | `SELECT AVG(price) FROM Orders`             |
+| `MIN()` / `MAX()` | Find lowest / highest value | `SELECT MIN(price), MAX(price) FROM Orders` |
+| `GROUP BY`        | Aggregate by category       | `GROUP BY customer_name`                    |
+| `HAVING`          | Filter groups               | `HAVING SUM(amount) > 1000`                 |
+.................................................................................................
+| 🔗 Join Type              | 📘 Description                                   | 🧪 Example                      |
+| ------------------------- | ------------------------------------------------ | ------------------------------- |
+| `INNER JOIN`              | Returns matching records from both tables        | Customers with orders           |
+| `LEFT JOIN`               | All records from left table, matching from right | All customers, even if no order |
+| `RIGHT JOIN`              | All records from right table, matching from left | All orders, even if no customer |
+| `FULL JOIN` (via `UNION`) | Combines `LEFT JOIN` + `RIGHT JOIN`              | All records from both sides     |
+| `SELF JOIN`               | Join the table to itself                         | Employees & their Managers      |
+............................................................................................................
+✅ You Now Know:
+
+How to create and manipulate tables (Day 1)
+
+How to summarize data with aggregate functions (Day 2)
+
+How to work with multiple tables using joins (Day 3)
