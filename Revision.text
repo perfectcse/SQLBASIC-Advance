@@ -25,8 +25,13 @@
 ............................................................................................................
 ✅ You Now Know:
 
-How to create and manipulate tables (Day 1)
-
-How to summarize data with aggregate functions (Day 2)
-
-How to work with multiple tables using joins (Day 3)
+1.How to create and manipulate tables (Day 1)
+2.How to summarize data with aggregate functions (Day 2)
+3.How to work with multiple tables using joins (Day 3)
+......................................................
+| Day | Topic                | Status   |
+|-----|----------------------|----------|
+| 1   | Basics (CRUD)        | ✅ Done  |
+| 2   | Aggregate Functions  | ✅ Done  |
+| 3   | Joins                | ✅ Done  |
+| 4   | Subqueries           | ✅ Done  |
