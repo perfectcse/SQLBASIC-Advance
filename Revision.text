@@ -1,3 +1,5 @@
+🔹 Day 1 – Basics (DDL + DML)
+
 | 🔧 Command     | 🔤 Purpose                 | 📝 Example                                         |
 | -------------- | -------------------------- | -------------------------------------------------- |
 | `CREATE TABLE` | Create a new table         | `CREATE TABLE Students (...)`                      |
@@ -6,6 +8,7 @@
 | `UPDATE`       | Modify existing data       | `UPDATE Students SET age = 24 WHERE name = 'Amit'` |
 | `DELETE`       | Remove rows from a table   | `DELETE FROM Students WHERE name = 'Sneha'`        |
 ....................................................................................................
+🔹 🔹 Day 2 – Aggregate Functions
 | 🛠️ Function      | 🎯 Use Case                 | ✅ Example                                   |
 | ----------------- | --------------------------- | ------------------------------------------- |
 | `COUNT()`         | Total number of rows        | `SELECT COUNT(*) FROM Orders`               |
@@ -15,6 +18,7 @@
 | `GROUP BY`        | Aggregate by category       | `GROUP BY customer_name`                    |
 | `HAVING`          | Filter groups               | `HAVING SUM(amount) > 1000`                 |
 .................................................................................................
+🔹 Day 3 – Joins
 | 🔗 Join Type              | 📘 Description                                   | 🧪 Example                      |
 | ------------------------- | ------------------------------------------------ | ------------------------------- |
 | `INNER JOIN`              | Returns matching records from both tables        | Customers with orders           |
@@ -23,15 +27,33 @@
 | `FULL JOIN` (via `UNION`) | Combines `LEFT JOIN` + `RIGHT JOIN`              | All records from both sides     |
 | `SELF JOIN`               | Join the table to itself                         | Employees & their Managers      |
 ............................................................................................................
+🔹 Day 4 – Subqueries
+| Type                | Use Case               | Example                                               |
+| ------------------- | ---------------------- | ----------------------------------------------------- |
+| Scalar Subquery     | Single value           | `WHERE salary = (SELECT MAX(salary) ...)`             |
+| `IN` Subquery       | Multiple matches       | `WHERE dept IN (SELECT dept ... HAVING COUNT(*) > 1)` |
+| `EXISTS`            | True/False check       | `WHERE EXISTS (SELECT 1 FROM Employees ...)`          |
+| Correlated Subquery | Depends on outer query | `WHERE salary > (SELECT AVG(...) WHERE dept = dept)`  |
+| Nested Subquery     | Multiple levels        | Find 2nd highest salary                               |
+
+🔹 Day 5 – Set Operators| Operator                               | Use Case                  | SQL Syntax                                        |
+| -------------------------------------- | ------------------------- | ------------------------------------------------- |
+| `UNION`                                | Merge & remove duplicates | `SELECT name FROM A UNION SELECT name FROM B`     |
+| `UNION ALL`                            | Merge & keep duplicates   | `SELECT name FROM A UNION ALL SELECT name FROM B` |
+| `INTERSECT` (MySQL uses JOIN)          | Common values             | `A INNER JOIN B ON A.name = B.name`               |
+| `EXCEPT` (MySQL uses LEFT JOIN + NULL) | In A but not in B         | `LEFT JOIN B ... WHERE B.name IS NULL`            |
+
+
 ✅ You Now Know:
 
 1.How to create and manipulate tables (Day 1)
 2.How to summarize data with aggregate functions (Day 2)
 3.How to work with multiple tables using joins (Day 3)
 ......................................................
-| Day | Topic                | Status   |
-|-----|----------------------|----------|
-| 1   | Basics (CRUD)        | ✅ Done  |
-| 2   | Aggregate Functions  | ✅ Done  |
-| 3   | Joins                | ✅ Done  |
-| 4   | Subqueries           | ✅ Done  |
+| ✅ Day | Topic               | Status |
+| ----- | ------------------- | ------ |
+| Day 1 | Basics (DDL + DML)  | ✅ Done |
+| Day 2 | Aggregate Functions | ✅ Done |
+| Day 3 | Joins               | ✅ Done |
+| Day 4 | Subqueries          | ✅ Done |
+| Day 5 | Set Operators       | ✅ Done |
