@@ -1,5 +1,11 @@
-🔹 Day 1 – Basics (DDL + DML)
-
+🔹| Round                            | What to Expect                                  | How to Prepare                                                |
+| -------------------------------- | ----------------------------------------------- | ------------------------------------------------------------- |
+| **Round 1: Screening**           | HR or basic intro questions                     | Prepare your self-intro, show interest in product & data      |
+| **Round 2: Aptitude + SQL Test** | SQL queries, Excel problem solving              | Practice on LeetCode (Easy SQL), Pivot Tables in Excel        |
+| **Round 3: Product Round**       | A/B testing, funnels, metrics, product thinking | Learn frameworks: AAARRR (Awareness → Revenue), A/B test case |
+| **Round 4: Behavioral**          | “Why Product Analytics?”, “Teamwork challenges” | Be ready with 1–2 stories (STAR method), career goals         |
+.................................................................................................................
+ Day 1 – Basics (DDL + DML)
 | 🔧 Command     | 🔤 Purpose                 | 📝 Example                                         |
 | -------------- | -------------------------- | -------------------------------------------------- |
 | `CREATE TABLE` | Create a new table         | `CREATE TABLE Students (...)`                      |
