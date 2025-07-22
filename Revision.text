@@ -56,10 +56,12 @@
 2.How to summarize data with aggregate functions (Day 2)
 3.How to work with multiple tables using joins (Day 3)
 ......................................................
-| ✅ Day | Topic               | Status |
-| ----- | ------------------- | ------ |
-| Day 1 | Basics (DDL + DML)  | ✅ Done |
-| Day 2 | Aggregate Functions | ✅ Done |
-| Day 3 | Joins               | ✅ Done |
-| Day 4 | Subqueries          | ✅ Done |
-| Day 5 | Set Operators       | ✅ Done |
+| Day | Topic                        | Status   |
+|-----|------------------------------|----------|
+| 1   | Basics (CRUD)                | ✅ Done  |
+| 2   | Aggregate Functions          | ✅ Done  |
+| 3   | Joins                        | ✅ Done  |
+| 4   | Subqueries                   | ✅ Done  |
+| 5   | Set Operators                | ✅ Done  |
+| 6   | CASE Statements & Logic      | ✅ Done  |
+| 7   | Views & Indexes              | ✅ Done  |
