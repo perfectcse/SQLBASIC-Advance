@@ -65,3 +65,32 @@
 | 5   | Set Operators                | ✅ Done  |
 | 6   | CASE Statements & Logic      | ✅ Done  |
 | 7   | Views & Indexes              | ✅ Done  |
+| 8   | Constraints & Keys           | ✅ Done  |
+| 9   | Table Management             | ✅ Done  |
+| 10  | Transactions (COMMIT/ROLLBACK/SAVEPOINT) | ✅ Done |
+
+
+
+| Constraint      | Purpose                                | Example                   |
+| --------------- | -------------------------------------- | ------------------------- |
+| **PRIMARY KEY** | Unique identifier for a row            | `student_id`              |
+| **NOT NULL**    | Field must have a value                | `name NOT NULL`           |
+| **UNIQUE**      | No duplicate values                    | `email UNIQUE`            |
+| **CHECK**       | Enforces condition                     | `CHECK(age >= 18)`        |
+| **DEFAULT**     | Assigns default value if none is given | `DEFAULT 'Unknown'`       |
+| **FOREIGN KEY** | Links two tables                       | `FOREIGN KEY(student_id)` |
+..........................................................................................
+| Command       | Purpose                                      | Example                           |
+| ------------- | -------------------------------------------- | --------------------------------- |
+| `ALTER TABLE` | Add, modify, or remove columns               | `ALTER TABLE ... ADD column_name` |
+| `TRUNCATE`    | Quickly delete all rows (faster than DELETE) | `TRUNCATE TABLE Employees`        |
+| `DELETE`      | Remove rows (can use WHERE clause)           | `DELETE FROM Employees WHERE ...` |
+| `DROP TABLE`  | Remove table structure & data permanently    | `DROP TABLE Employees`            |
+........................................................................................
+| Command             | Purpose                               |
+| ------------------- | ------------------------------------- |
+| `START TRANSACTION` | Begins a transaction block            |
+| `COMMIT`            | Saves all changes permanently         |
+| `ROLLBACK`          | Undoes all changes in the transaction |
+| `SAVEPOINT`         | Creates a point to roll back to       |
+| `ROLLBACK TO`       | Undo operations after a savepoint     |
