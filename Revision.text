@@ -94,3 +94,45 @@
 | `ROLLBACK`          | Undoes all changes in the transaction |
 | `SAVEPOINT`         | Creates a point to roll back to       |
 | `ROLLBACK TO`       | Undo operations after a savepoint     |
+.............................................................................................................................
+Interview questions
+Question 1: Match Products with Prices
+Concepts Used:
+CTE (Common Table Expressions) – WITH t1 AS (...) helps create temporary result sets.
+ROW_NUMBER() Window Function – Assigns a unique sequential number to rows, since no key column is available for joining.
+JOIN – Combines rows of both tables based on assigned row numbers.
+How to Solve:
+Assign row numbers to both tables using ROW_NUMBER() OVER ().
+Join on these row numbers to match products with prices in the same order.
+Key SQL Areas:
+Window Functions
+CTEs
+JOIN Operations
+.............................................................................................................................
+Question 2 Recap
+
+We have two tables with duplicates and NULL values:
+id
+---
+1
+1
+1
+2
+2
+NULL
+NULL
+3
+5
+TABLE
+id
+---
+1
+1
+2
+2
+NULL
+NULL
+4
+5
+6
+We need to find the number of rows returned by different joins.
