@@ -136,3 +136,58 @@ NULL
 5
 6
 We need to find the number of rows returned by different joins.
+
+Concepts (quick notes you can paste into your study doc)
+
+INNER JOIN: only matching keys; NULL never equals NULL.
+
+LEFT JOIN / RIGHT JOIN: keep all rows from left/right; unmatched side becomes NULL.
+
+FULL OUTER JOIN: all rows from both; unmatched from each side appear with NULL from the other side. (Emulate in MySQL with LEFT + RIGHT-only-unmatched.)
+
+Duplicates multiply: if a key appears m times on the left and n times on the right, it contributes m×n rows to matching joins.
+
+NULLs don’t match: NULL = NULL is unknown/false; handle with IS NULL when needed.
+
+Ordering doesn’t matter for equality joins, but use ORDER BY to inspect results clearly.
+1. Arithmetic Operators
+| Symbol | Name                   | Example            | Meaning                  |
+| ------ | ---------------------- | ------------------ | ------------------------ |
+| `+`    | Plus / Addition        | `salary + bonus`   | Adds values              |
+| `-`    | Minus / Subtraction    | `price - discount` | Subtracts values         |
+| `*`    | Asterisk / Multiply    | `quantity * rate`  | Multiplies values        |
+| `/`    | Forward Slash / Divide | `total / count`    | Divides values           |
+| `%`    | Modulo / Remainder     | `10 % 3`           | Remainder after division |
+2. Comparison Operators
+| Symbol       | Name                  | Example           | Meaning           |
+| ------------ | --------------------- | ----------------- | ----------------- |
+| `=`          | Equal to              | `id = 5`          | True if equal     |
+| `!=` or `<>` | Not equal to          | `dept_id <> 10`   | True if not equal |
+| `>`          | Greater than          | `salary > 5000`   | True if larger    |
+| `<`          | Less than             | `age < 30`        | True if smaller   |
+| `>=`         | Greater than or equal | `marks >= 40`     | True if ≥         |
+| `<=`         | Less than or equal    | `experience <= 5` | True if ≤         |
+3. Logical Operators
+| Symbol    | Name          | Example                      | Meaning                |
+| --------- | ------------- | ---------------------------- | ---------------------- |
+| `AND`     | Logical AND   | `age > 18 AND gender = 'M'`  | Both must be true      |
+| `OR`      | Logical OR    | `dept = 'IT' OR dept = 'HR'` | Either can be true     |
+| `NOT`     | Logical NOT   | `NOT active`                 | Reverses truth         |
+| `IN`      | In list       | `id IN (1,2,3)`              | Matches any in list    |
+| `BETWEEN` | Range         | `marks BETWEEN 40 AND 60`    | Within range           |
+| `LIKE`    | Pattern match | `name LIKE 'A%'`             | Matches string pattern |
+| `IS NULL` | Null check    | `email IS NULL`              | True if value is null  |
+4. Wildcards (used with LIKE)
+| Symbol | Name                | Example | Meaning                          |
+| ------ | ------------------- | ------- | -------------------------------- |
+| `%`    | Percent wildcard    | `'A%'`  | Any number of characters after A |
+| `_`    | Underscore wildcard | `'A_'`  | Exactly one character after A    |
+5. Joins / Other Symbols
+| Symbol      | Name                | Example                | Meaning                            |         |   |         |              |
+| ----------- | ------------------- | ---------------------- | ---------------------------------- | ------- | - | ------- | ------------ |
+| `*`         | Asterisk            | `SELECT *`             | Select all columns                 |         |   |         |              |
+| `;`         | Semicolon           | `... ;`                | End of SQL statement               |         |   |         |              |
+| `--`        | Double dash         | `-- comment`           | Single line comment                |         |   |         |              |
+| `/* ... */` | Slash-star          | `/* comment */`        | Multi-line comment                 |         |   |         |              |
+| \`          |                     | \`                     | Concatenation (in Oracle/ANSI SQL) | \`fname |   | lname\` | Join strings |
+| `CONCAT()`  | Function (in MySQL) | `CONCAT(fname, lname)` | Join strings                       |         |   |         |              |
