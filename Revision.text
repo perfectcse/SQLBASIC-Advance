@@ -191,3 +191,10 @@ Ordering doesn’t matter for equality joins, but use ORDER BY to inspect result
 | `/* ... */` | Slash-star          | `/* comment */`        | Multi-line comment                 |         |   |         |              |
 | \`          |                     | \`                     | Concatenation (in Oracle/ANSI SQL) | \`fname |   | lname\` | Join strings |
 | `CONCAT()`  | Function (in MySQL) | `CONCAT(fname, lname)` | Join strings                       |         |   |         |              |
+......................................
+| **JOIN Type**       | **Rule**                                                             | **From Example** (Table\_1 × Table\_2)                       | **Row Count** |
+| ------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------ | ------------- |
+| **INNER JOIN**      | Only rows where values match in both tables. `NULL` ≠ `NULL`.        | Matches: 1 (6 rows), 2 (4 rows), 5 (1 row)                   | **11**        |
+| **LEFT JOIN**       | All rows from **left table** + matches. Unmatched → `NULL` on right. | Inner rows (11) + unmatched left (3, 2×NULL)                 | **14**        |
+| **RIGHT JOIN**      | All rows from **right table** + matches. Unmatched → `NULL` on left. | Inner rows (11) + unmatched right (4, 6, 2×NULL)             | **15**        |
+| **FULL OUTER JOIN** | All rows from both tables. Unmatched rows filled with `NULL`s.       | Inner (11) + left-only (3, NULLs) + right-only (4, 6, NULLs) | **18**        |
