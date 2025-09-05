@@ -198,3 +198,20 @@ Ordering doesn’t matter for equality joins, but use ORDER BY to inspect result
 | **LEFT JOIN**       | All rows from **left table** + matches. Unmatched → `NULL` on right. | Inner rows (11) + unmatched left (3, 2×NULL)                 | **14**        |
 | **RIGHT JOIN**      | All rows from **right table** + matches. Unmatched → `NULL` on left. | Inner rows (11) + unmatched right (4, 6, 2×NULL)             | **15**        |
 | **FULL OUTER JOIN** | All rows from both tables. Unmatched rows filled with `NULL`s.       | Inner (11) + left-only (3, NULLs) + right-only (4, 6, NULLs) | **18**        |
+..........................................................................................
+
+🔍 What happens when you run it:
+INNER JOIN Result:
+| id | name   | subject | score |
+| -- | ------ | ------- | ----- |
+| 1  | Raj    | Math    | 85    |
+| 2  | Vishal | Math    | 90    |
+
+LEFT JOIN Result:
+
+| id | name   | subject | score |
+| -- | ------ | ------- | ----- |
+| 1  | Raj    | Math    | 85    |
+| 2  | Vishal | Math    | 90    |
+| 3  | Ankit  | NULL    | NULL  |
+👉 All students are returned. If no marks exist, values from marks are NULL.
